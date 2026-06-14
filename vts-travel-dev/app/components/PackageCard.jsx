@@ -1,6 +1,6 @@
 "use client";
 
-import { Star, Clock, MapPin } from "lucide-react";
+import { Star, Clock, MapPin, Info } from "lucide-react";
 
 /**
  * PackageCard Component — Premium Travel Card
@@ -9,23 +9,23 @@ import { Star, Clock, MapPin } from "lucide-react";
  * - JetBrains Mono for pricing
  * - Teal gradient "Book Now" CTA with glow
  */
-export default function PackageCard({ pkg }) {
+export default function PackageCard({ pkg, onOpenDetails }) {
   const discount = Math.round(
     ((pkg.originalPrice - pkg.price) / pkg.originalPrice) * 100
   );
 
   const handleBookNow = () => {
-    const message = `Hi! I'm interested in the *${pkg.title}* package (${pkg.duration}) priced at ₹${pkg.price.toLocaleString()}. Please share complete itinerary and availability.`;
+    const message = `Hi, I want to know the best price for the ${pkg.title} package. Please share more details.`;
     window.open(
-      `https://wa.me/919999999999?text=${encodeURIComponent(message)}`,
+      `https://wa.me/918541035585?text=${encodeURIComponent(message)}`,
       "_blank"
     );
   };
 
   return (
-    <div className="bg-card-bg rounded-2xl overflow-hidden card-hover group shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
+    <div className="bg-card-bg rounded-2xl overflow-hidden card-hover group shadow-[0_2px_8px_rgba(0,0,0,0.06)] flex flex-col h-full">
       {/* Image Container */}
-      <div className="relative aspect-[4/3] overflow-hidden">
+      <div className="relative aspect-[4/3] overflow-hidden shrink-0">
         <img
           src={pkg.image}
           alt={pkg.title}
@@ -39,7 +39,10 @@ export default function PackageCard({ pkg }) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
 
         {/* Discount Badge — Coral accent */}
-        <div className="absolute top-3 left-3 px-2.5 py-1 bg-accent text-white text-[11px] font-bold rounded-lg shadow-lg tracking-wide uppercase">
+        <div 
+          className="absolute top-3 left-3 px-2.5 py-1 text-white text-[11px] font-bold rounded-lg shadow-lg tracking-wide uppercase"
+          style={{ backgroundColor: "#EF4444" }}
+        >
           {discount}% Off
         </div>
 
@@ -69,7 +72,7 @@ export default function PackageCard({ pkg }) {
       </div>
 
       {/* Card Body */}
-      <div className="p-4">
+      <div className="p-4 flex flex-col flex-grow">
         {/* Highlights */}
         <div className="flex flex-wrap gap-1.5 mb-3">
           {pkg.highlights.map((item, idx) => (
@@ -83,23 +86,28 @@ export default function PackageCard({ pkg }) {
         </div>
 
         {/* Price & CTA */}
-        <div className="flex items-end justify-between">
-          <div>
-            <div className="flex items-baseline gap-1.5">
-              <span className="text-xl font-mono-price font-bold text-foreground">
-                ₹{pkg.price.toLocaleString()}
-              </span>
-              <span className="text-sm font-mono-price text-muted line-through">
-                ₹{pkg.originalPrice.toLocaleString()}
-              </span>
-            </div>
-            <p className="text-[10px] text-muted mt-0.5 tracking-wide uppercase">per person</p>
+        <div className="flex items-center justify-between mt-auto pt-4 border-t border-card-border">
+          <div className="flex flex-col items-start">
+            <span className="text-[10px] font-bold text-muted uppercase tracking-widest mb-1">
+              Price on Request
+            </span>
+            {/* About Place Option */}
+            <button
+              onClick={() => onOpenDetails()}
+              className="text-[13px] font-bold text-foreground hover:text-primary flex items-center gap-1.5 transition-colors group/link"
+            >
+              <Info className="w-4 h-4 text-primary/70 group-hover/link:text-primary transition-colors" />
+              <span className="group-hover/link:underline underline-offset-4">Explore Place</span>
+            </button>
           </div>
           <button
             onClick={handleBookNow}
-            className="px-4 py-2 gradient-bg text-white text-sm font-semibold rounded-xl shadow-md shadow-primary/15 hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 btn-glow tracking-wide"
+            className="group/btn relative overflow-hidden px-5 py-2.5 bg-foreground dark:bg-white text-[13px] font-semibold rounded-full shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300"
           >
-            Book Now
+            <span className="absolute inset-0 w-full h-full gradient-bg opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></span>
+            <span className="relative z-10 text-background dark:text-black group-hover/btn:text-white transition-colors duration-300 flex items-center gap-2">
+              Enquire Now
+            </span>
           </button>
         </div>
       </div>

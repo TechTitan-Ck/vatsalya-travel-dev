@@ -17,8 +17,10 @@ export default function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [scrolled, setScrolled] = useState(false);
+  const [callMenuOpen, setCallMenuOpen] = useState(false);
   const searchRef = useRef(null);
   const inputRef = useRef(null);
+  const callMenuRef = useRef(null);
 
   const allPackages = [...domesticPackages, ...internationalPackages];
 
@@ -45,6 +47,9 @@ export default function Header() {
         setSearchOpen(false);
         setSearchQuery("");
       }
+      if (callMenuRef.current && !callMenuRef.current.contains(e.target)) {
+        setCallMenuOpen(false);
+      }
     };
     document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
@@ -57,7 +62,7 @@ export default function Header() {
   const handleBookNow = (pkg) => {
     const message = `Hi! I'm interested in the *${pkg.title}* package (${pkg.duration}) priced at ₹${pkg.price.toLocaleString()}. Please share more details.`;
     window.open(
-      `https://wa.me/919999999999?text=${encodeURIComponent(message)}`,
+      `https://wa.me/918541035585?text=${encodeURIComponent(message)}`,
       "_blank"
     );
     setSearchOpen(false);
@@ -74,19 +79,20 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 py-3.5 flex items-center justify-between gap-3">
         {/* Logo & Branding */}
-        <div className="flex items-center gap-2.5 shrink-0">
-          <div className="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center shadow-lg shadow-primary/20">
-            <MapPin className="w-5 h-5 text-white" strokeWidth={2.5} />
-          </div>
+        <button 
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="flex items-center gap-2.5 shrink-0 text-left hover:opacity-90 transition-opacity focus:outline-none"
+        >
+          <img src="/images/logo.png" alt="VTS Logo" className="w-11 h-9 sm:w-14 sm:h-12 object-contain drop-shadow-md" />
           <div className="flex flex-col leading-tight">
-            <span className="text-xl font-display font-bold tracking-tight text-foreground">
+            <span className="text-[17px] sm:text-xl font-sans font-bold tracking-tight text-foreground">
               Vatsalya
             </span>
-            <span className="text-[9px] text-muted uppercase tracking-[0.2em] font-medium">
+            <span className="text-[7.5px] sm:text-[9px] text-muted uppercase tracking-[0.2em] font-medium">
               Tourism & Services
             </span>
           </div>
-        </div>
+        </button>
 
         {/* Search, Call Now & Theme Toggle */}
         <div className="flex items-center gap-2" ref={searchRef}>
@@ -172,19 +178,47 @@ export default function Header() {
             </div>
           </button>
 
-          {/* Call Now Button */}
-          <a
-            href="tel:+919999999999"
-            className="flex items-center gap-1.5 h-10 px-3.5 rounded-xl text-white text-xs font-semibold shadow-lg hover:scale-105 active:scale-95 transition-all duration-200"
-            style={{
-              background: "linear-gradient(135deg, #EF4444, #DC2626)",
-              boxShadow: "0 4px 14px rgba(239, 68, 68, 0.35)",
-            }}
-            aria-label="Call Now"
-          >
-            <Phone className="w-3.5 h-3.5" strokeWidth={2.5} />
-            <span className="hidden sm:inline">Call Now</span>
-          </a>
+          {/* Call Now Dropdown */}
+          <div className="relative" ref={callMenuRef}>
+            <button
+              onClick={() => setCallMenuOpen(!callMenuOpen)}
+              className="flex items-center gap-1.5 h-10 px-3.5 rounded-xl text-white text-xs font-semibold shadow-lg hover:scale-105 active:scale-95 transition-all duration-200"
+              style={{
+                background: "linear-gradient(135deg, #EF4444, #DC2626)",
+                boxShadow: "0 4px 14px rgba(239, 68, 68, 0.35)",
+              }}
+              aria-label="Call Now Options"
+            >
+              <Phone className="w-3.5 h-3.5" strokeWidth={2.5} />
+              <span className="hidden sm:inline">Call Now</span>
+            </button>
+
+            {/* Dropdown Menu */}
+            {callMenuOpen && (
+              <div className="absolute top-full right-0 mt-2 w-56 bg-card-bg border border-card-border rounded-2xl shadow-[0_16px_48px_rgba(0,0,0,0.12)] z-50 animate-slide-up flex flex-col p-2">
+                <a
+                  href="tel:+918541035585"
+                  className="flex items-center gap-3 p-3 hover:bg-muted-bg rounded-xl transition-colors text-left text-sm font-medium text-foreground"
+                >
+                  <Phone className="w-4 h-4 text-primary shrink-0" />
+                  <div>
+                    <div className="text-xs text-muted font-normal">Call</div>
+                    <div>+91 8541035585</div>
+                  </div>
+                </a>
+                <a
+                  href="tel:+917463992161"
+                  className="flex items-center gap-3 p-3 hover:bg-muted-bg rounded-xl transition-colors text-left text-sm font-medium text-foreground"
+                >
+                  <Phone className="w-4 h-4 text-primary shrink-0" />
+                  <div>
+                    <div className="text-xs text-muted font-normal">Call</div>
+                    <div>+91 7463992161</div>
+                  </div>
+                </a>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </header>

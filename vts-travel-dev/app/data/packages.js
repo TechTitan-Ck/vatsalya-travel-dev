@@ -305,22 +305,22 @@ export const internationalBanners = [
 export const teamMembers = [
   {
     id: "t1",
-    name: "Neha Kumari",
+    name: "Kri. Neha",
     designation: "Management",
     bio: "Overseeing core management strategies and ensuring seamless organizational workflows.",
     avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e2e8f0' /><g fill='none' stroke='%23475569' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><path d='M 20 100 Q 50 70 80 100' /><circle cx='50' cy='40' r='18' /><path d='M 32 40 Q 50 10 68 40 Q 72 65 82 85 M 32 40 Q 28 65 18 85' /></g></svg>",
   },
   {
     id: "t2",
-    name: "Rupam",
+    name: "Rupam Kr.",
     designation: "Head of Operation & Travel Lead",
     bio: "Leading travel operations and crafting top-notch, unforgettable travel experiences.",
     avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e2e8f0' /><g fill='none' stroke='%23475569' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><path d='M 20 100 Q 50 65 80 100' /><circle cx='50' cy='40' r='20' /><path d='M 30 40 Q 50 15 70 40' /></g></svg>",
   },
   {
     id: "t3",
-    name: "Chandan Kr",
-    designation: "Technical Support",
+    name: "Chandan Kr.",
+    designation: "Software & Technical Support",
     bio: "Providing robust technical support to ensure smooth and uninterrupted digital services.",
     avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e2e8f0' /><g fill='none' stroke='%23475569' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><path d='M 20 100 Q 50 65 80 100' /><circle cx='50' cy='40' r='20' /><path d='M 30 40 Q 50 15 70 40' /></g></svg>",
   },
@@ -341,7 +341,7 @@ export const reviews = [
     location: "Mumbai",
     rating: 5,
     text: "Absolutely incredible Kashmir trip! Every detail was perfectly planned. Vatsal made our honeymoon truly magical.",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
+    avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e2e8f0' /><g fill='none' stroke='%23475569' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><path d='M 20 100 Q 50 65 80 100' /><circle cx='50' cy='40' r='20' /><path d='M 30 40 Q 50 15 70 40' /></g></svg>",
   },
   {
     id: "r2",
@@ -349,7 +349,7 @@ export const reviews = [
     location: "Delhi",
     rating: 5,
     text: "Our Dubai trip was beyond expectations. The team handled everything from visa to hotel check-in seamlessly.",
-    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face",
+    avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e2e8f0' /><g fill='none' stroke='%23475569' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><path d='M 20 100 Q 50 70 80 100' /><circle cx='50' cy='40' r='18' /><path d='M 32 40 Q 50 10 68 40 Q 72 65 82 85 M 32 40 Q 28 65 18 85' /></g></svg>",
   },
   {
     id: "r3",
@@ -357,7 +357,7 @@ export const reviews = [
     location: "Bangalore",
     rating: 4,
     text: "Kerala backwaters houseboat experience was unforgettable. Great value for money and excellent service!",
-    avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face",
+    avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e2e8f0' /><g fill='none' stroke='%23475569' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><path d='M 20 100 Q 50 65 80 100' /><circle cx='50' cy='40' r='20' /><path d='M 30 40 Q 50 15 70 40' /></g></svg>",
   },
   {
     id: "r4",
@@ -365,6 +365,6 @@ export const reviews = [
     location: "Pune",
     rating: 5,
     text: "Bali trip organized by Vatsal was the best vacation we ever had. Will definitely book again!",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face",
+    avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e2e8f0' /><g fill='none' stroke='%23475569' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><path d='M 20 100 Q 50 70 80 100' /><circle cx='50' cy='40' r='18' /><path d='M 32 40 Q 50 10 68 40 Q 72 65 82 85 M 32 40 Q 28 65 18 85' /></g></svg>",
   },
 ];

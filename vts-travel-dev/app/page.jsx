@@ -67,7 +67,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <Footer />
+      <Footer setTripType={setTripType} />
 
       {/* Categories Full-Screen Overlay */}
       <CategoriesOverlay

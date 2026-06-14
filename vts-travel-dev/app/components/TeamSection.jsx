@@ -17,7 +17,7 @@ const Linkedin = ({ className }) => (
  */
 export default function TeamSection() {
   return (
-    <section className="px-4 py-8 max-w-7xl mx-auto">
+    <section id="about" className="px-4 py-8 max-w-7xl mx-auto">
       <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
         Meet Our Experts
       </h2>

@@ -70,7 +70,7 @@ const trustBadges = [
   { icon: Shield, label: "Safe & Secure Travel", detail: "100% verified partners" },
   { icon: Headphones, label: "24/7 Support", detail: "Always here for you" },
   { icon: Clock, label: "On-Time Guarantee", detail: "Punctual departures" },
-  { icon: CreditCard, label: "Easy Payments", detail: "EMI options available" },
+  { icon: CreditCard, label: "Easy Payments", detail: "Multiple Payment Options" },
 ];
 
 export default function Services() {
@@ -96,7 +96,7 @@ export default function Services() {
               >
                 {/* Subtle background glow on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-300`} />
-                
+
                 <div
                   className={`w-14 h-14 mb-4 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center shadow-lg ${service.glow} group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300 relative z-10`}
                 >
@@ -120,7 +120,7 @@ export default function Services() {
           Your Trusted Travel Partner
         </h2>
         <p className="text-sm text-muted mt-1.5 leading-relaxed">
-          Trusted by 10,000+ happy travelers across India
+          Trusted by 1,000+ happy travelers across India
         </p>
         <span className="section-line" />
 

@@ -61,7 +61,7 @@ export default function HeroCarousel({ tripType }) {
     const banner = banners[current];
     const message = `Hi! I saw the "${banner.title}" package on your website and I'm interested. Can you share details?`;
     window.open(
-      `https://wa.me/919999999999?text=${encodeURIComponent(message)}`,
+      `https://wa.me/918541035585?text=${encodeURIComponent(message)}`,
       "_blank"
     );
   };

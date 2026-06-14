@@ -11,19 +11,12 @@ export default function CTABanner() {
     const message =
       "Hi Vatsal Travel! 👋 I'd like to chat about planning a trip. Can you help me find the best options?";
     window.open(
-      `https://wa.me/919999999999?text=${encodeURIComponent(message)}`,
+      `https://wa.me/918541035585?text=${encodeURIComponent(message)}`,
       "_blank"
     );
   };
 
-  const handleContact = () => {
-    const message =
-      "Hello Vatsal Travel! I'd like to get in touch regarding a travel booking. Please share your available packages and contact details.";
-    window.open(
-      `https://wa.me/919999999999?text=${encodeURIComponent(message)}`,
-      "_blank"
-    );
-  };
+
 
   return (
     <section className="px-4 py-8 max-w-7xl mx-auto">
@@ -50,13 +43,13 @@ export default function CTABanner() {
               <MessageCircle className="w-5 h-5" />
               Chat With Us
             </button>
-            <button
-              onClick={handleContact}
+            <a
+              href="tel:+918541035585"
               className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/12 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 hover:scale-105 active:scale-95 transition-all duration-300 tracking-wide"
             >
               <Phone className="w-5 h-5" />
               Contact Us
-            </button>
+            </a>
           </div>
         </div>
       </div>
