@@ -15,16 +15,20 @@ export function ThemeProvider({ children }) {
   const [darkMode, setDarkMode] = useState(false);
   const [mounted, setMounted] = useState(false);
 
-  // Load saved theme from localStorage on mount
+  // Load saved theme or system preference on mount
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
     const saved = localStorage.getItem("vatsal-theme");
-    if (saved === "dark") {
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    
+    if (saved === "dark" || (!saved && systemPrefersDark)) {
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setDarkMode(true);
       document.documentElement.classList.add("dark");
     } else {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setDarkMode(false);
       document.documentElement.classList.remove("dark");
     }
   }, []);

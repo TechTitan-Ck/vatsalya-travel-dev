@@ -10,10 +10,10 @@
 
 /* --- Light Mode Variables --- */
 :root {
-  --background: #F0F4F8;
+  --background: #FAF8F5;
   --foreground: #111111;
   --card-bg: #FFFFFF;
-  --card-border: #E2E8F0;
+  --card-border: #E5E0D8;
   --primary: #0B4C8C;
   --primary-dark: #073666;
   --primary-light: #1E79C9;
@@ -22,7 +22,7 @@
   --accent: #E0F2FE;
   --accent-dark: #BAE6FD;
   --muted: #64748B;
-  --muted-bg: #F8FAFC;
+  --muted-bg: #F2EFE9;
   --success: #10B981;
   --danger: #EF4444;
   --gradient-start: #1E79C9;

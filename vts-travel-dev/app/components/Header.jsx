@@ -138,7 +138,7 @@ export default function Header() {
                               {pkg.title}
                             </p>
                             <p className="text-xs text-muted">
-                              {pkg.duration} · <span className="font-mono-price">₹{pkg.price.toLocaleString()}</span>
+                              {pkg.duration} · <span className="font-semibold text-success">At best price</span>
                             </p>
                           </div>
                         </button>

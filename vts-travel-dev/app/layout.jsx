@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col bg-background text-foreground transition-colors duration-300 relative">
         {/* Theme B Ambient Ocean Gradient */}
         <div className="fixed inset-0 bg-gradient-to-br from-[#1E79C9] to-[#0B4C8C] pointer-events-none opacity-15 dark:opacity-30" style={{ zIndex: 0 }} />
-        
+
         {/* Main Content Container */}
         <div className="relative z-10 flex flex-col min-h-full">
           <ThemeProvider>{children}</ThemeProvider>

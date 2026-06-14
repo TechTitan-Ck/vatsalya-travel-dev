@@ -51,22 +51,22 @@ export default function BottomNav({ activeTab, onTabChange, onCategoriesToggle }
           border: darkMode ? "1px solid rgba(255, 255, 255, 0.1)" : "1px solid rgba(0, 0, 0, 0.05)",
         }}
       >
-        <div className="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center shrink-0">
-          <Info className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+        <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+          <Info className="w-4 h-4 text-primary" />
         </div>
         <div>
-          <p className="text-sm font-bold text-slate-900 dark:text-white">
+          <p className="text-sm font-bold text-foreground">
             {popupInfo.tab} Feature
           </p>
-          <p className="text-xs text-slate-500 dark:text-slate-400">
+          <p className="text-xs text-muted">
             Work in progress. Coming soon!
           </p>
         </div>
         <button 
           onClick={() => setPopupInfo({ show: false, tab: "" })}
-          className="ml-1 w-6 h-6 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center shrink-0 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+          className="ml-1 w-6 h-6 rounded-full bg-muted-bg flex items-center justify-center shrink-0 hover:bg-card-border transition-colors"
         >
-          <X className="w-3.5 h-3.5 text-slate-500 dark:text-slate-400" />
+          <X className="w-3.5 h-3.5 text-muted" />
         </button>
       </div>
 
