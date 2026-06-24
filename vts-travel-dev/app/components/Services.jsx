@@ -125,7 +125,7 @@ export default function Services() {
 
                 {/* Contact Us WhatsApp Button (Hover/Touch) */}
                 <div className="absolute bottom-8 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 group-active:opacity-100 group-active:translate-y-0 group-focus:opacity-100 group-focus:translate-y-0 transition-all duration-500 z-20">
-                  <div className="flex items-center gap-2 bg-[#25D366]/90 backdrop-blur-md border border-white/20 text-white px-5 py-2.5 rounded-full shadow-[0_8px_16px_rgba(37,211,102,0.25)] hover:bg-[#25D366] hover:scale-105 transition-all text-xs sm:text-sm font-bold tracking-wide">
+                  <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/40 text-white px-5 py-2.5 rounded-full shadow-[0_8px_16px_rgba(0,0,0,0.1)] hover:bg-[#25D366] hover:border-[#25D366] hover:shadow-[0_8px_16px_rgba(37,211,102,0.4)] hover:scale-105 transition-all text-xs sm:text-sm font-bold tracking-wide">
                     <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
                     Contact Us
                   </div>
