@@ -65,7 +65,7 @@ export default function Footer({ setTripType }) {
                 <img src="/images/logo.png" alt="VTS Logo" className="w-14 h-12 object-contain drop-shadow-md" />
                 <div className="flex flex-col leading-tight">
                   <span className="text-[20px] sm:text-xl font-sans font-bold tracking-tight text-foreground">
-                    Vatsalya
+                    VATSALYA
                   </span>
                   <span className="text-[9px] text-muted uppercase tracking-[0.2em] font-medium">
                     Tourism & Services
@@ -185,7 +185,7 @@ export default function Footer({ setTripType }) {
         {/* Copyright */}
         <div className="mt-10 pt-6 border-t border-card-border text-center">
           <p className="text-xs text-muted flex items-center justify-center gap-1.5 font-medium tracking-wide">
-            © {new Date().getFullYear()} Vatsalya Tourism & Services. Made with{" "}
+            © {new Date().getFullYear()} VATSALYA Tourism & Services. Made with{" "}
             <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" /> in India
           </p>
         </div>

@@ -4,7 +4,7 @@
 @import "tailwindcss";
 
 /* ============================================
-   Vatsalya TRAVEL — Premium Design System
+   VATSALYA TRAVEL — Premium Design System
    "Oceanic Wellness" Aesthetic
    ============================================ */
 
@@ -107,59 +107,119 @@
 
 /* --- Keyframes --- */
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 8px rgba(37, 211, 102, 0.4),
-                0 0 24px rgba(37, 211, 102, 0.15);
+      0 0 24px rgba(37, 211, 102, 0.15);
   }
+
   50% {
     box-shadow: 0 0 18px rgba(37, 211, 102, 0.6),
-                0 0 44px rgba(37, 211, 102, 0.25);
+      0 0 44px rgba(37, 211, 102, 0.25);
   }
 }
 
 @keyframes slide-up {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slide-in-right {
-  from { opacity: 0; transform: translateX(30px); }
-  to { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 @keyframes bounce-subtle {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
 }
 
 @keyframes carousel-dot-active {
-  0% { width: 8px; }
-  100% { width: 24px; }
+  0% {
+    width: 8px;
+  }
+
+  100% {
+    width: 24px;
+  }
 }
 
 @keyframes glow-ring {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(13, 148, 136, 0); }
-  50% { box-shadow: 0 0 0 6px rgba(13, 148, 136, 0.12); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(13, 148, 136, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 0 6px rgba(13, 148, 136, 0.12);
+  }
 }
 
 @keyframes count-up {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* --- Base Styles --- */
@@ -183,7 +243,10 @@ body {
 
 /* Respect reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -195,13 +258,16 @@ body {
   width: 5px;
   height: 5px;
 }
+
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--muted);
   border-radius: 999px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
 }
@@ -265,6 +331,7 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -277,8 +344,9 @@ body {
 /* --- Card Hover Effect --- */
 .card-hover {
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-              box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .card-hover:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 32px var(--shadow-md);
@@ -308,6 +376,7 @@ body {
 .avatar-glow {
   position: relative;
 }
+
 .avatar-glow::before {
   content: '';
   position: absolute;
@@ -319,6 +388,7 @@ body {
   transition: opacity 0.3s ease;
   z-index: 0;
 }
+
 .avatar-glow:hover::before {
   opacity: 0.45;
 }
@@ -341,4 +411,83 @@ body {
   color: var(--primary);
   opacity: 0.06;
   pointer-events: none;
+}
+
+/* --- Water Wave Animation --- */
+.water-wave-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 65%;
+  /* Maximum height the wave reaches */
+  overflow: hidden;
+  z-index: 0;
+  border-radius: 1rem;
+  /* match card border radius */
+  pointer-events: none;
+}
+
+.water-wave-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.group:hover .water-wave-wrapper,
+.group:active .water-wave-wrapper,
+.group:focus .water-wave-wrapper {
+  transform: translateY(0);
+}
+
+.water-wave-wrapper::before,
+.water-wave-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300%;
+  height: 100%;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M0,40 C150,80 250,0 400,40 C550,80 650,0 800,40 L800,90 L0,90 Z' fill='%230ea5e9'/%3E%3C/svg%3E"),
+    linear-gradient(#0ea5e9, #0ea5e9);
+  background-position: top left, 0 30px;
+  background-size: 33.333333% 41px, 100% 100%;
+  background-repeat: repeat-x, no-repeat;
+  opacity: 0.15;
+  animation: wave-horizontal 4s linear infinite;
+  will-change: transform;
+}
+
+.water-wave-wrapper::after {
+  opacity: 0.25;
+  animation-duration: 6s;
+  animation-direction: reverse;
+  margin-left: -40px;
+}
+
+.dark .water-wave-wrapper::before,
+.dark .water-wave-wrapper::after {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M0,40 C150,80 250,0 400,40 C550,80 650,0 800,40 L800,90 L0,90 Z' fill='%231E79C9'/%3E%3C/svg%3E"),
+    linear-gradient(#1E79C9, #1E79C9);
+  opacity: 0.12;
+}
+
+.dark .water-wave-wrapper::after {
+  opacity: 0.2;
+}
+
+@keyframes wave-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-33.333333%);
+  }
 }

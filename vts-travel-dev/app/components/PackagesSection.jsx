@@ -100,7 +100,7 @@ export default function PackagesSection({ tripType }) {
               
               <div className="bg-muted-bg rounded-2xl p-5 mb-6 border border-card-border shadow-sm">
                 <h4 className="font-semibold text-foreground mb-4 text-sm uppercase tracking-wide flex items-center gap-2">
-                  <Star className="w-4 h-4 text-secondary fill-secondary" /> 
+                  <Star className="w-4 h-4 text-amber-400 fill-amber-400" /> 
                   Expert Travel Tips
                 </h4>
                 <ul className="text-sm text-muted space-y-3.5">

@@ -1,6 +1,6 @@
 "use client";
 
-import { Plane, Hotel, Map, FileCheck, Shield, Headphones, Clock, CreditCard, Car, Heart, Briefcase, Compass } from "lucide-react";
+import { Plane, Hotel, Map, FileCheck, Shield, Headphones, Clock, CreditCard, Car, Heart, Briefcase, Compass, MessageCircle } from "lucide-react";
 
 /**
  * Services Component — Travel Solutions & Trust Badges
@@ -74,6 +74,14 @@ const trustBadges = [
 ];
 
 export default function Services() {
+  const handleWhatsAppRedirect = (serviceTitle) => {
+    const message = `Hi! I'm interested in your *${serviceTitle}* services. Please share more details.`;
+    window.open(
+      `https://wa.me/918541035585?text=${encodeURIComponent(message)}`,
+      "_blank"
+    );
+  };
+
   return (
     <section className="px-4 py-8 max-w-7xl mx-auto">
       {/* Services Section */}
@@ -92,8 +100,14 @@ export default function Services() {
             return (
               <div
                 key={idx}
-                className="bg-card-bg border border-card-border rounded-2xl p-5 sm:p-6 card-hover group text-center hover:border-primary/30 transition-all duration-300 relative overflow-hidden flex flex-col items-center"
+                onClick={() => handleWhatsAppRedirect(service.title)}
+                className="bg-card-bg border border-card-border rounded-2xl p-5 sm:p-6 sm:pb-8 card-hover group text-center hover:border-primary/30 transition-all duration-300 relative overflow-hidden flex flex-col items-center cursor-pointer"
               >
+                {/* Water Wave Animation */}
+                <div className="water-wave-container">
+                  <div className="water-wave-wrapper" />
+                </div>
+
                 {/* Subtle background glow on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-300`} />
 
@@ -105,9 +119,17 @@ export default function Services() {
                 <h3 className="text-[15px] sm:text-base font-bold text-foreground mb-2 tracking-tight group-hover:text-primary transition-colors duration-300 relative z-10">
                   {service.title}
                 </h3>
-                <p className="text-[13px] text-muted leading-relaxed hidden sm:block relative z-10">
+                <p className="text-[13px] text-muted leading-relaxed hidden sm:block relative z-10 group-hover:opacity-0 group-hover:-translate-y-2 transition-all duration-300">
                   {service.description}
                 </p>
+
+                {/* Contact Us WhatsApp Button (Hover/Touch) */}
+                <div className="absolute bottom-8 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 group-active:opacity-100 group-active:translate-y-0 group-focus:opacity-100 group-focus:translate-y-0 transition-all duration-500 z-20">
+                  <div className="flex items-center gap-2 bg-[#25D366]/90 backdrop-blur-md border border-white/20 text-white px-5 py-2.5 rounded-full shadow-[0_8px_16px_rgba(37,211,102,0.25)] hover:bg-[#25D366] hover:scale-105 transition-all text-xs sm:text-sm font-bold tracking-wide">
+                    <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
+                    Contact Us
+                  </div>
+                </div>
               </div>
             );
           })}

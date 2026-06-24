@@ -71,11 +71,10 @@ export default function ReviewsCarousel() {
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star
                       key={i}
-                      className={`w-4 h-4 ${
-                        i < review.rating
-                          ? "text-secondary fill-secondary"
+                      className={`w-4 h-4 ${i < review.rating
+                          ? "text-amber-400 fill-amber-400"
                           : "text-card-border"
-                      }`}
+                        }`}
                     />
                   ))}
                 </div>
@@ -125,11 +124,10 @@ export default function ReviewsCarousel() {
               key={idx}
               onClick={() => goTo(idx)}
               aria-label={`Go to review ${idx + 1}`}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                idx === current
+              className={`h-1.5 rounded-full transition-all duration-300 ${idx === current
                   ? "w-5 bg-primary"
                   : "w-1.5 bg-muted/25 hover:bg-muted/40"
-              }`}
+                }`}
             />
           ))}
         </div>

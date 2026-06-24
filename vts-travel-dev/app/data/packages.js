@@ -340,7 +340,7 @@ export const reviews = [
     name: "Rahul K.",
     location: "Mumbai",
     rating: 5,
-    text: "Absolutely incredible Kashmir trip! Every detail was perfectly planned. Vatsal made our honeymoon truly magical.",
+    text: "Absolutely incredible Kashmir trip! Every detail was perfectly planned. Vatsalya made our honeymoon truly magical.",
     avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e2e8f0' /><g fill='none' stroke='%23475569' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><path d='M 20 100 Q 50 65 80 100' /><circle cx='50' cy='40' r='20' /><path d='M 30 40 Q 50 15 70 40' /></g></svg>",
   },
   {
@@ -364,7 +364,7 @@ export const reviews = [
     name: "Pooja T.",
     location: "Pune",
     rating: 5,
-    text: "Bali trip organized by Vatsal was the best vacation we ever had. Will definitely book again!",
+    text: "Bali trip organized by Vatsalya was the best vacation we ever had. Will definitely book again!",
     avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e2e8f0' /><g fill='none' stroke='%23475569' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><path d='M 20 100 Q 50 70 80 100' /><circle cx='50' cy='40' r='18' /><path d='M 32 40 Q 50 10 68 40 Q 72 65 82 85 M 32 40 Q 28 65 18 85' /></g></svg>",
   },
 ];
