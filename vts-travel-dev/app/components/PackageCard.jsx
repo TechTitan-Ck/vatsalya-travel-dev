@@ -65,7 +65,7 @@ export default function PackageCard({ pkg, onOpenDetails }) {
           </div>
           {/* Rating — Gold star */}
           <div className="flex items-center gap-1 bg-white/15 backdrop-blur-md px-2 py-1 rounded-lg border border-white/10">
-            <Star className="w-3.5 h-3.5 text-secondary fill-secondary" />
+            <Star className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
             <span className="text-white text-xs font-semibold">{pkg.rating}</span>
           </div>
         </div>

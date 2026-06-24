@@ -15,7 +15,7 @@ import WhatsAppButton from "./components/WhatsAppButton";
 import CategoriesOverlay from "./components/CategoriesOverlay";
 
 /**
- * Home Page - Main entry point for Vatsalya Travel & Tourism
+ * Home Page - Main entry point for VATSALYA Travel & Tourism
  * Manages the global tripType state which dynamically filters
  * the Hero Banner and Travel Packages across the entire page.
  */

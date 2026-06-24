@@ -26,13 +26,13 @@ export default function Header() {
 
   const searchResults = searchQuery.trim()
     ? allPackages.filter(
-        (pkg) =>
-          pkg.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          pkg.subtitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          pkg.highlights.some((h) =>
-            h.toLowerCase().includes(searchQuery.toLowerCase())
-          )
-      )
+      (pkg) =>
+        pkg.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        pkg.subtitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        pkg.highlights.some((h) =>
+          h.toLowerCase().includes(searchQuery.toLowerCase())
+        )
+    )
     : [];
 
   useEffect(() => {
@@ -60,7 +60,7 @@ export default function Header() {
   }, [searchOpen]);
 
   const handleBookNow = (pkg) => {
-    const message = `Hi! I'm interested in the *${pkg.title}* package (${pkg.duration}) priced at ₹${pkg.price.toLocaleString()}. Please share more details.`;
+    const message = `Hi! I'm interested in the *${pkg.title}* package (${pkg.duration}). Please share more details.`;
     window.open(
       `https://wa.me/918541035585?text=${encodeURIComponent(message)}`,
       "_blank"
@@ -71,22 +71,21 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
+      className={`sticky top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
           ? "bg-nav-bg backdrop-blur-2xl shadow-[0_1px_20px_rgba(0,0,0,0.06)]"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 py-3.5 flex items-center justify-between gap-3">
         {/* Logo & Branding */}
-        <button 
+        <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="flex items-center gap-2.5 shrink-0 text-left hover:opacity-90 transition-opacity focus:outline-none"
         >
           <img src="/images/logo.png" alt="VTS Logo" className="w-11 h-9 sm:w-14 sm:h-12 object-contain drop-shadow-md" />
           <div className="flex flex-col leading-tight">
             <span className="text-[17px] sm:text-xl font-sans font-bold tracking-tight text-foreground">
-              Vatsalya
+              VATSALYA
             </span>
             <span className="text-[7.5px] sm:text-[9px] text-muted uppercase tracking-[0.2em] font-medium">
               Tourism & Services
