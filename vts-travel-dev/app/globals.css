@@ -453,8 +453,8 @@ body {
   width: 300%;
   height: 100%;
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M0,40 C150,80 250,0 400,40 C550,80 650,0 800,40 L800,90 L0,90 Z' fill='%230ea5e9'/%3E%3C/svg%3E"),
-    linear-gradient(#0ea5e9, #0ea5e9);
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M0,40 C150,80 250,0 400,40 C550,80 650,0 800,40 L800,90 L0,90 Z' fill='%2364748b'/%3E%3C/svg%3E"),
+    linear-gradient(#64748b, #64748b);
   background-position: top left, 0 30px;
   background-size: 33.333333% 41px, 100% 100%;
   background-repeat: repeat-x, no-repeat;
