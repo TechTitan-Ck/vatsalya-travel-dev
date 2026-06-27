@@ -16,6 +16,20 @@ const services = [
     glow: "shadow-amber-500/20",
   },
   {
+    icon: Compass,
+    title: "Customized Tours",
+    description: "Personalized itineraries built from scratch to match your travel style.",
+    color: "from-purple-500 to-fuchsia-600",
+    glow: "shadow-purple-500/20",
+  },
+  {
+    icon: Briefcase,
+    title: "Corporate Tours",
+    description: "Streamlined business travel solutions, offsites, and MICE events.",
+    color: "from-slate-500 to-zinc-600",
+    glow: "shadow-slate-500/20",
+  },
+  {
     icon: Hotel,
     title: "Hotel & Resort Booking",
     description: "Handpicked luxury hotels, resorts & homestays at unbeatable prices.",
@@ -42,20 +56,6 @@ const services = [
     description: "Romantic getaways designed to create lifelong memories for couples.",
     color: "from-rose-500 to-pink-600",
     glow: "shadow-rose-500/20",
-  },
-  {
-    icon: Briefcase,
-    title: "Corporate Travel",
-    description: "Streamlined business travel solutions, offsites, and MICE events.",
-    color: "from-slate-500 to-zinc-600",
-    glow: "shadow-slate-500/20",
-  },
-  {
-    icon: Compass,
-    title: "Customized Tours",
-    description: "Personalized itineraries built from scratch to match your travel style.",
-    color: "from-purple-500 to-fuchsia-600",
-    glow: "shadow-purple-500/20",
   },
   {
     icon: FileCheck,
