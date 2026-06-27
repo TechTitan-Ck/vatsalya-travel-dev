@@ -172,10 +172,10 @@ export default function Footer({ setTripType }) {
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-primary shrink-0" />
                 <a
-                  href="mailto:info@vatsalyatravel.com"
+                  href="mailto:info@vatsalyatourism.com"
                   className="text-sm text-muted hover:text-primary transition-colors"
                 >
-                  info@vatsalyatravel.com
+                  info@vatsalyatourism.com
                 </a>
               </li>
             </ul>
