@@ -83,7 +83,7 @@ export default function Services() {
   };
 
   return (
-    <section className="px-4 py-8 max-w-7xl mx-auto">
+    <section id="services" className="px-4 py-8 max-w-7xl mx-auto">
       {/* Services Section */}
       <div className="mb-12">
         <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
@@ -142,7 +142,7 @@ export default function Services() {
           Your Trusted Travel Partner
         </h2>
         <p className="text-sm text-muted mt-1.5 leading-relaxed">
-          Trusted by 1,000+ happy travelers across India
+          Trusted by 6,000+ happy travelers across India
         </p>
         <span className="section-line" />
 

@@ -58,7 +58,7 @@ export default function Footer({ setTripType }) {
           {/* Brand & Description */}
           <div>
             <div className="inline-flex flex-col mb-4">
-              <button 
+              <button
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 className="flex items-center gap-2 text-left hover:opacity-90 transition-opacity focus:outline-none pb-1"
               >
@@ -172,10 +172,10 @@ export default function Footer({ setTripType }) {
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-primary shrink-0" />
                 <a
-                  href="mailto:support@vatsalyatravel.com"
+                  href="mailto:info@vatsalyatravel.com"
                   className="text-sm text-muted hover:text-primary transition-colors"
                 >
-                  support@vatsalyatravel.com
+                  info@vatsalyatravel.com
                 </a>
               </li>
             </ul>

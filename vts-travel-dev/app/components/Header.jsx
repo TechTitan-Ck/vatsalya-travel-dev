@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { Search, Sun, Moon, MapPin, X, Phone } from "lucide-react";
+import { Search, Sun, Moon, MapPin, X, Phone, Menu } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 import { domesticPackages, internationalPackages } from "../data/packages";
 
@@ -12,15 +12,17 @@ import { domesticPackages, internationalPackages } from "../data/packages";
  * - Smooth Sun/Moon theme toggle with rotation
  * - Sticky with glass effect on scroll
  */
-export default function Header() {
+export default function Header({ setTripType, onCategoriesToggle }) {
   const { darkMode, toggleTheme } = useTheme();
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [scrolled, setScrolled] = useState(false);
   const [callMenuOpen, setCallMenuOpen] = useState(false);
+  const [desktopMenuOpen, setDesktopMenuOpen] = useState(false);
   const searchRef = useRef(null);
   const inputRef = useRef(null);
   const callMenuRef = useRef(null);
+  const desktopMenuRef = useRef(null);
 
   const allPackages = [...domesticPackages, ...internationalPackages];
 
@@ -50,6 +52,9 @@ export default function Header() {
       if (callMenuRef.current && !callMenuRef.current.contains(e.target)) {
         setCallMenuOpen(false);
       }
+      if (desktopMenuRef.current && !desktopMenuRef.current.contains(e.target)) {
+        setDesktopMenuOpen(false);
+      }
     };
     document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
@@ -77,21 +82,94 @@ export default function Header() {
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 py-3.5 flex items-center justify-between gap-3">
-        {/* Logo & Branding */}
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="flex items-center gap-2.5 shrink-0 text-left hover:opacity-90 transition-opacity focus:outline-none"
-        >
-          <img src="/images/logo.png" alt="VTS Logo" className="w-11 h-9 sm:w-14 sm:h-12 object-contain drop-shadow-md" />
-          <div className="flex flex-col leading-tight">
-            <span className="text-[17px] sm:text-xl font-sans font-bold tracking-tight text-foreground">
-              VATSALYA
-            </span>
-            <span className="text-[7.5px] sm:text-[9px] text-muted uppercase tracking-[0.2em] font-medium">
-              Tourism & Services
-            </span>
+        {/* Desktop Menu & Logo */}
+        <div className="flex items-center gap-3 sm:gap-4">
+          {/* Desktop Hamburger Menu (hidden on mobile, visible on sm and above) */}
+          <div className="relative hidden sm:block" ref={desktopMenuRef}>
+            <button
+              onClick={() => setDesktopMenuOpen(!desktopMenuOpen)}
+              className="w-10 h-10 rounded-xl bg-muted-bg border border-card-border flex items-center justify-center hover:border-primary/30 hover:bg-card-bg transition-all duration-200"
+              aria-label="Menu"
+            >
+              <Menu className="w-5 h-5 text-foreground" />
+            </button>
+
+            {/* Dropdown Menu */}
+            {desktopMenuOpen && (
+              <div className="absolute top-full left-0 mt-2 w-56 bg-card-bg border border-card-border rounded-2xl shadow-[0_16px_48px_rgba(0,0,0,0.12)] z-50 animate-slide-up flex flex-col py-2 overflow-hidden">
+                <button
+                  onClick={() => { setDesktopMenuOpen(false); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+                  className="w-full text-left px-4 py-2.5 hover:bg-muted-bg transition-colors text-sm font-medium text-foreground"
+                >
+                  Home
+                </button>
+                <button
+                  onClick={() => {
+                    setDesktopMenuOpen(false);
+                    if (onCategoriesToggle) onCategoriesToggle();
+                  }}
+                  className="w-full text-left px-4 py-2.5 hover:bg-muted-bg transition-colors text-sm font-medium text-foreground"
+                >
+                  Categories
+                </button>
+                <button
+                  onClick={() => {
+                    setDesktopMenuOpen(false);
+                    if (setTripType) setTripType('domestic');
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  className="w-full text-left px-4 py-2.5 hover:bg-muted-bg transition-colors text-sm font-medium text-foreground"
+                >
+                  Domestic Trips
+                </button>
+                <button
+                  onClick={() => {
+                    setDesktopMenuOpen(false);
+                    if (setTripType) setTripType('international');
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  className="w-full text-left px-4 py-2.5 hover:bg-muted-bg transition-colors text-sm font-medium text-foreground"
+                >
+                  International Trips
+                </button>
+                <button
+                  onClick={() => {
+                    setDesktopMenuOpen(false);
+                    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="w-full text-left px-4 py-2.5 hover:bg-muted-bg transition-colors text-sm font-medium text-foreground"
+                >
+                  Services
+                </button>
+                <button
+                  onClick={() => {
+                    setDesktopMenuOpen(false);
+                    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="w-full text-left px-4 py-2.5 hover:bg-muted-bg transition-colors text-sm font-medium text-foreground"
+                >
+                  About Us
+                </button>
+              </div>
+            )}
           </div>
-        </button>
+
+          {/* Logo & Branding */}
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="flex items-center gap-2.5 shrink-0 text-left hover:opacity-90 transition-opacity focus:outline-none"
+          >
+            <img src="/images/logo.png" alt="VTS Logo" className="w-11 h-9 sm:w-14 sm:h-12 object-contain drop-shadow-md" />
+            <div className="flex flex-col leading-tight">
+              <span className="text-[17px] sm:text-xl font-sans font-bold tracking-tight text-foreground">
+                VATSALYA
+              </span>
+              <span className="text-[7.5px] sm:text-[9px] text-muted uppercase tracking-[0.2em] font-medium">
+                Tourism & Services
+              </span>
+            </div>
+          </button>
+        </div>
 
         {/* Search, Call Now & Theme Toggle */}
         <div className="flex items-center gap-2" ref={searchRef}>

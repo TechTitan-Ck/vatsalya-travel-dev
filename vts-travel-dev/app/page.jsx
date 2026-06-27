@@ -7,6 +7,7 @@ import HeroCarousel from "./components/HeroCarousel";
 import PackagesSection from "./components/PackagesSection";
 import Services from "./components/Services";
 import ReviewsCarousel from "./components/ReviewsCarousel";
+import TravelerGallery from "./components/TravelerGallery";
 import CTABanner from "./components/CTABanner";
 import TeamSection from "./components/TeamSection";
 import Footer from "./components/Footer";
@@ -41,7 +42,7 @@ export default function Home() {
   return (
     <>
       {/* Sticky Header with Search & Theme Toggle */}
-      <Header />
+      <Header setTripType={setTripType} onCategoriesToggle={handleCategoriesToggle} />
 
       <main className="flex-1">
         {/* Trip Type Toggle: Domestic / International */}
@@ -58,6 +59,9 @@ export default function Home() {
 
         {/* Customer Reviews Carousel */}
         <ReviewsCarousel />
+
+        {/* Traveler's Gallery */}
+        <TravelerGallery />
 
         {/* Call-to-Action Banner */}
         <CTABanner />
