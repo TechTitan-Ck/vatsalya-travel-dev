@@ -306,8 +306,8 @@ export const teamMembers = [
   {
     id: "t1",
     name: "Kri. Neha",
-    designation: "Management",
-    bio: "Overseeing core management strategies and ensuring seamless organizational workflows.",
+    designation: "Founder & Managing Director",
+    bio: "Steering the corporate vision and operational excellence that turns travel dreams into reality.",
     avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e2e8f0' /><g fill='none' stroke='%23475569' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><path d='M 20 100 Q 50 70 80 100' /><circle cx='50' cy='40' r='18' /><path d='M 32 40 Q 50 10 68 40 Q 72 65 82 85 M 32 40 Q 28 65 18 85' /></g></svg>",
   },
   {
@@ -318,17 +318,17 @@ export const teamMembers = [
     avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e2e8f0' /><g fill='none' stroke='%23475569' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><path d='M 20 100 Q 50 65 80 100' /><circle cx='50' cy='40' r='20' /><path d='M 30 40 Q 50 15 70 40' /></g></svg>",
   },
   {
+    id: "t4",
+    name: "Prince Raj",
+    designation: "Head of Financial Strategy, Legal & Business Growth",
+    bio: "Architecting the financial blueprint, legal guardrails, and strategic engines that power your dream journeys.",
+    avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e2e8f0' /><g fill='none' stroke='%23475569' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><path d='M 20 100 Q 50 65 80 100' /><circle cx='50' cy='40' r='20' /><path d='M 30 40 Q 50 15 70 40' /></g></svg>",
+  },
+  {
     id: "t3",
     name: "Chandan Kr.",
     designation: "Software & Technical Support",
     bio: "Providing robust technical support to ensure smooth and uninterrupted digital services.",
-    avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e2e8f0' /><g fill='none' stroke='%23475569' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><path d='M 20 100 Q 50 65 80 100' /><circle cx='50' cy='40' r='20' /><path d='M 30 40 Q 50 15 70 40' /></g></svg>",
-  },
-  {
-    id: "t4",
-    name: "Prince Guru",
-    designation: "Finance Support",
-    bio: "Taking care of finances and managing the economic health of the organization.",
     avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e2e8f0' /><g fill='none' stroke='%23475569' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><path d='M 20 100 Q 50 65 80 100' /><circle cx='50' cy='40' r='20' /><path d='M 30 40 Q 50 15 70 40' /></g></svg>",
   },
 ];
@@ -337,8 +337,8 @@ export const teamMembers = [
 export const reviews = [
   {
     id: "r1",
-    name: "Rahul K.",
-    location: "Mumbai",
+    name: "Rahul Kr.",
+    location: "Patna",
     rating: 5,
     text: "Absolutely incredible Kashmir trip! Every detail was perfectly planned. Vatsalya made our honeymoon truly magical.",
     avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e2e8f0' /><g fill='none' stroke='%23475569' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><path d='M 20 100 Q 50 65 80 100' /><circle cx='50' cy='40' r='20' /><path d='M 30 40 Q 50 15 70 40' /></g></svg>",
@@ -365,6 +365,38 @@ export const reviews = [
     location: "Pune",
     rating: 5,
     text: "Bali trip organized by Vatsalya was the best vacation we ever had. Will definitely book again!",
+    avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e2e8f0' /><g fill='none' stroke='%23475569' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><path d='M 20 100 Q 50 70 80 100' /><circle cx='50' cy='40' r='18' /><path d='M 32 40 Q 50 10 68 40 Q 72 65 82 85 M 32 40 Q 28 65 18 85' /></g></svg>",
+  },
+  {
+    id: "r5",
+    name: "Vikas Sharma",
+    location: "Patna",
+    rating: 5,
+    text: "The Andaman trip was superb! Scuba diving at Havelock was out of this world. Vatsalya team coordinated every ferry and transfer perfectly.",
+    avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e2e8f0' /><g fill='none' stroke='%23475569' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><path d='M 20 100 Q 50 65 80 100' /><circle cx='50' cy='40' r='20' /><path d='M 30 40 Q 50 15 70 40' /></g></svg>",
+  },
+  {
+    id: "r6",
+    name: "Anjali Verma",
+    location: "Gaya Ji",
+    rating: 4,
+    text: "Booked a Rajasthan tour for our family. The heritage hotels were beautiful, and the local driver was very polite and knowledgeable. Highly recommended!",
+    avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e2e8f0' /><g fill='none' stroke='%23475569' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><path d='M 20 100 Q 50 70 80 100' /><circle cx='50' cy='40' r='18' /><path d='M 32 40 Q 50 10 68 40 Q 72 65 82 85 M 32 40 Q 28 65 18 85' /></g></svg>",
+  },
+  {
+    id: "r7",
+    name: "Rohan Desai",
+    location: "Surat",
+    rating: 5,
+    text: "Our trip to Manali was amazing. Experiencing snow at Rohtang Pass was a dream come true for my kids. Thanks to Vatsalya for a flawless itinerary.",
+    avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e2e8f0' /><g fill='none' stroke='%23475569' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><path d='M 20 100 Q 50 65 80 100' /><circle cx='50' cy='40' r='20' /><path d='M 30 40 Q 50 15 70 40' /></g></svg>",
+  },
+  {
+    id: "r8",
+    name: "Seema Patil ",
+    location: "Mumbai",
+    rating: 5,
+    text: "Perfect weekend getaway in Goa! The resort they booked had private beach access and the whole trip was completely stress-free. Very professional service.",
     avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e2e8f0' /><g fill='none' stroke='%23475569' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><path d='M 20 100 Q 50 70 80 100' /><circle cx='50' cy='40' r='18' /><path d='M 32 40 Q 50 10 68 40 Q 72 65 82 85 M 32 40 Q 28 65 18 85' /></g></svg>",
   },
 ];
