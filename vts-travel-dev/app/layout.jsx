@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata = {
   title: "VATSALYA Tourism & Services — Premium Travel Experiences",
   description:
-    "Discover incredible domestic and international travel packages with VATSALYA Travel & Tourism. Book flights, hotels, guided tours, and more — your trusted travel partner since 2010.",
+    "Discover incredible domestic and international travel packages with VATSALYA Tourism & Services. Book flights, hotels, guided tours, and more — your trusted travel partner since 2010.",
   keywords: [
     "travel", "tourism", "Services", "travel packages", "domestic trips",
     "international trips", "Tourism & Services", "VATSALYA Tourism & Services","VATSALYA Tourism", "India tours",
