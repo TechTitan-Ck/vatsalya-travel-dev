@@ -2,18 +2,18 @@ import { ThemeProvider } from "./components/ThemeProvider";
 import "./globals.css";
 
 export const metadata = {
-  title: "VATSALYA Travel & Tourism — Premium Travel Experiences",
+  title: "VATSALYA Tourism & Services — Premium Travel Experiences",
   description:
     "Discover incredible domestic and international travel packages with VATSALYA Travel & Tourism. Book flights, hotels, guided tours, and more — your trusted travel partner since 2010.",
   keywords: [
-    "travel", "tourism", "travel packages", "domestic trips",
-    "international trips", "VATSALYA travel", "India tours",
+    "travel", "tourism", "Services", "travel packages", "domestic trips",
+    "international trips", "Tourism & Services", "VATSALYA Tourism & Services","VATSALYA Tourism", "India tours",
     "Dubai", "Maldives", "Kashmir", "Kerala",
   ],
   openGraph: {
-    title: "VATSALYA Travel & Tourism — Premium Travel Experiences",
+    title: "VATSALYA Tourism & Services — Premium Travel Experiences",
     description:
-      "Book your dream vacation with VATSALYA Travel. Premium domestic & international packages at the best prices.",
+      "Book your dream vacation with VATSALYA Tourism & Services. Premium domestic & international packages at the best prices.",
     type: "website",
     locale: "en_IN",
   },
